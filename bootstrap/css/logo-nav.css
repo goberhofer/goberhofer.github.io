@@ -8,6 +8,7 @@
 
 body {
 	overflow-y: hidden;
+	overflow-x: auto;
 	/*font-family: "droid-sans";*/
 	font-family: "Myriad Pro", "Droid Sans", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
@@ -77,6 +78,7 @@ body {
     padding-bottom: 0px;
     font-size: 1.25em;
     font-weight: 300;
+
 }
 
 .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
@@ -333,8 +335,6 @@ h4{
 	font-size:2em;
 }
 
-
-
 @media(min-width:768px) {
     body {
         padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
@@ -344,3 +344,64 @@ h4{
         padding: 15px 0;
     }
 }
+
+@media(min-width:768px) and (max-width: 1199px){
+
+	#logo-pic{
+		width: 60%;
+	}
+
+	#juke{
+		padding-left: 0;
+		margin-left: 0;
+		position: absolute;
+	}
+
+	#juke li>img{
+		width: 20%;
+	}
+
+	#landing-photo{
+		width: 60%;
+	}
+}
+
+@media(min-width:768px) and (max-width: 991px){
+
+	#logo-pic{
+		width: 50%;
+		margin-top: 30px;
+		margin-left: 17px;
+	}
+
+	#landing-photo{
+		width: 100%;
+	}
+
+	.navbar-brand ul li{
+		margin-left: -80px;
+	}
+
+	.navbar-brand ul
+	{
+		display: inline-block;
+		margin-right: -65px;
+		margin-top: 15px;
+	}
+
+	.nav{
+		float: left!important;
+		margin-left: -15px;
+	}
+
+	#landing{
+		margin-top: 40px;
+	}
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { ... }
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) { ... }
