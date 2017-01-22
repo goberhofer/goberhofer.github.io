@@ -7,17 +7,25 @@
 
 
 body {
-	overflow-y: hidden;
-	overflow-x: auto;
+	overflow: hidden;
+	height: 100%;
 	/*font-family: "droid-sans";*/
 	font-family: "Myriad Pro", "Droid Sans", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
 }
 
-html, body {margin: 0; height: 100%; overflow-y: hidden}
+/*html, body {margin: 0; height: 100%;}*/
+
+#coming-soon{
+	margin-left: 100px;
+	margin-top: 125px;
+
+}
 
 /* Logo, juke box, and navbar */
-
+.navbar{
+	/*background-color: white;*/
+}
 .navbar-header{
 
 	/*whitspace on side*/
@@ -28,6 +36,7 @@ html, body {margin: 0; height: 100%; overflow-y: hidden}
 	border-bottom: 5px solid black;
 	position:relative; 
 	top:0px;
+	background-color: white;
 }
 
 #logo{
@@ -365,6 +374,21 @@ h4{
 	#landing-photo{
 		width: 60%;
 	}
+
+	#about{
+		margin-top: 10px;
+	}
+
+	#about-photo
+	{
+		float: left;
+		width: 350px;
+		height: auto;
+		background-color: transparent;
+		margin-right: 100px;
+		margin-bottom: 100px;
+	}
+
 }
 
 @media(min-width:768px) and (max-width: 991px){
@@ -408,6 +432,15 @@ h4{
 
 	#landing{
 		margin-top: 40px;
+	}
+
+	#about-photo
+	{
+		float: left;
+		width: 300px;
+		height: auto;
+		background-color: transparent;
+		margin:0;
 	}
 
 }
@@ -530,6 +563,27 @@ h4{
 
 	}
 
+		#about-photo
+	{
+		float: right;
+		width: 200px;
+		height: auto;
+		background-color: transparent;
+		margin:0;
+	}
+
+	#about-text{
+		width: 50%;
+		height: 600px;
+		margin-left: 100px;
+		margin-top: -35px;
+		overflow-y: scroll;
+	}
+
+	#about-text::-webkit-scrollbar { 
+	    display: none; 
+	}
+
 }
 
 @media (max-width: 660px){
@@ -548,10 +602,15 @@ h4{
 		width: 15%;
 	}
 
+
 }
  
 /* Landscape phones and down */
 @media (max-width: 485px) {
+
+	body{
+		/*overflow:auto;*/
+	}
 	.hidden-xxs {
     	display: none !important;
   	}
@@ -573,7 +632,15 @@ h4{
 		top:0px;
 	}
 
-	#navbar-collapse-1 > ul{
 
+	#about-photo
+	{
+		float: left;
+		width: 100px;
+		height: auto;
+		background-color: transparent;
+		margin-top:40%;
+		margin-left: -5px;
+		position: absolute;
 	}
 }
