@@ -644,12 +644,4 @@ h4{
 		position: absolute;
 	}
 
-		#about-text{
-		width: 75%;
-		height: 600px;
-		margin-left: 100px;
-		margin-top: -35px;
-		overflow-y: scroll;
-	}
-
 }
