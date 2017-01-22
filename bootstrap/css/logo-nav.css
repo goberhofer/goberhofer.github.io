@@ -16,7 +16,6 @@ body {
 
 /* Logo, juke box, and navbar */
 
-
 .navbar-header{
 
 	/*whitspace on side*/
@@ -118,7 +117,7 @@ body {
 }
 
 
-.collapse .navbar-collapse{
+#navbar-collapse-1{
 	margin-top: 0px;
 }
 
@@ -394,6 +393,17 @@ h4{
 		margin-left: -15px;
 	}
 
+	.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+    	background-color: transparent;
+    	border-color: #337ab7;
+	}
+
+	.dropdown-menu > li > a:hover,
+	.dropdown-menu > li > a:focus {
+	  background-color: transparent;
+	  background-image: none;
+	}
+
 	#landing{
 		margin-top: 40px;
 	}
@@ -401,7 +411,167 @@ h4{
 }
 
 /* Landscape phone to portrait tablet */
-@media (max-width: 767px) { ... }
+@media (max-width: 767px) {
+	body {
+        padding-top: 40px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    	margin-left: 5%;
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 15px 0;
+    }
+
+    #logo-pic{
+		width: 70%;
+		margin-left: -5px;
+		margin-top: 15px;
+	}
+
+	.container > .navbar-header{
+		margin-left: 5%;
+	}
+
+	.navbar-header{
+		/*whitspace on side*/
+		width: 90%;
+		margin-left: 15px;
+		/*Line to end of page*/
+		/*width: 115%;*/
+		height: 100px;
+		border-bottom: 5px solid black;
+		position:relative; 
+		top:0px;
+	}
+
+	.navbar-brand ul li{
+		display: inline-block;
+		margin-left: -110px;
+	}
+
+	.navbar-brand ul
+	{
+		display: inline-block;
+		left: 75%;
+	}
+
+	.nav{
+		float: left!important;
+		margin-left: -15px;
+	}
+
+	#juke{
+		position: absolute;
+	}
+
+	#juke li>img{
+		width: 20%;
+	}
+
+	#landing-photo{
+		width: 95%;
+	}
+
+	#navbar-collapse-1{
+		margin-left: 6%;
+	}
+
+	#navbar-collapse-1 > ul > li > a{
+		padding-top: 7%;
+		/*padding-bottom: 5%;*/
+	}
+
+	.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+    	background-color: transparent;
+    	border-color: #337ab7;
+	}
+
+	.dropdown-menu> li{
+		width: auto;
+	}
+
+	.dropdown-menu > li:hover:before{
+	          content: "\203a";
+	          padding-right: 0px;
+	          position: absolute;
+	          text-align: right;
+	          margin-left: 5px;
+	}
+
+	.dropdown-menu > li > a:hover,
+	.dropdown-menu > li > a:focus {
+	  background-color: transparent;
+	  background-image: none;
+	}
+
+	.navbar-nav .open .dropdown-menu .dropdown-header, .navbar-nav .open .dropdown-menu>li>a {
+    	padding: 0px 5px 0px 25px;
+	}
+
+	.dropdown-menu{
+		text-align: left;
+		min-width: 50px;
+		box-shadow: none;
+		border: none;
+		padding: 0px;
+	}
+
+
+	#navbar-collapse-1 > ul > li > a{
+		color: black;
+	}
+
+	 #navbar-collapse-1 > ul > li > a:hover,  #navbar-collapse-1 > ul > li > a:focus{
+		color: black;
+		text-decoration: underline;
+		text-shadow: none;
+		background: none !important;
+
+	}
+
+}
+
+@media (max-width: 660px){
+	#logo-pic{
+		width: 70%;
+		margin-left: 1px;
+		margin-top: 30px;
+	}
+
+	#juke{
+		margin-top: 3%;
+	}
+
+
+	#juke li>img{
+		width: 15%;
+	}
+
+}
  
 /* Landscape phones and down */
-@media (max-width: 480px) { ... }
+@media (max-width: 485px) {
+	.hidden-xxs {
+    	display: none !important;
+  	}
+  	#logo-pic{
+		width: 100%;
+		margin-left: 5px;
+		margin-top: 25px;
+	}
+
+	.navbar-header{
+		/*whitspace on side*/
+		width: 90%;
+		margin-left: 15px;
+		/*Line to end of page*/
+		/*width: 115%;*/
+		height: 100px;
+		border-bottom: 5px solid black;
+		position:relative; 
+		top:0px;
+	}
+
+	#navbar-collapse-1 > ul{
+
+	}
+}
