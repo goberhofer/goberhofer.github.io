@@ -627,6 +627,9 @@ h4{
     .navbar-fixed-top .navbar-brand {
         padding: 15px 0;
     }
+    #navs{
+	background-color: transparent;
+}
 
     #logo-pic{
 		width: 70%;
