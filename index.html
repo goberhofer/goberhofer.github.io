@@ -35,12 +35,12 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-fixed-top" id= "navs" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <div class="navbar-brand"> 
-                        <a id="logo" href="#"><img id="logo-pic" src="images/name.png" alt="" width="50%" height="auto"></a>
+                        <a id="logo" href="#!home"><img id="logo-pic" src="images/name.png" alt="" width="50%" height="auto"></a>
                         
                         <ul id="juke" class="nav navbar-nav navbar-right hidden-xxs">
 
@@ -54,35 +54,34 @@
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="navbar" id="navbar-collapse-1">
-                    <ul class="nav navbar-right navbar-nav">
-                        <a href="#!landing"></a>
-                        <a href="#!coming-soon"></a>
-                        <li class="dropdown">
-                            <a href="#!about">about</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#!coming-soon">music</a>
-<!--                                     <ul class="dropdown-menu dropdown-menu-right pull-center">
-                                      <li><a href="#!music-works">works</a></li>
-                                      <li><a href="#!music-tunes">tunes</a></li>
-                                    </ul> -->
-                        </li>
-                        <li>
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#!coming-soon">theater</a>
-                                    <ul class="dropdown-menu dropdown-menu-right pull-center">
-<!--                                       <li><a href="images/about/TheatreResume2016.pdf" target="_blank">resume</a></li>
-                                      <li><a href="#!theater-headshots">headshots</a></li>
-                                      <li><a href="#!theater-stills">performance stills</a></li> -->
-                                    </ul>
+                        <ul class="nav navbar-right navbar-nav">
+                            <a href="#!home"></a>
+                            <li class="dropdown">
+                                <a href="#!about">about</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">music</a>
+                                        <ul class="dropdown-menu dropdown-menu-right pull-center">
+                                          <li><a href="#!music-works">works</a></li>
+                                          <li><a href="#!music-tunes">tunes</a></li>
+                                        </ul>
+                            </li>
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">theater</a>
+                                        <ul class="dropdown-menu dropdown-menu-right pull-center">
+                                          <li><a href="images/about/TheatreResume2016.pdf" target="_blank">resume</a></li>
+                                          <li><a href="#!theater-headshots">headshots</a></li>
+                                          <li><a href="#!theater-stills">performance stills</a></li>
+                                        </ul>
 
-                        </li>
-                        <li>
-                            <a href="#!coming-soon">contact</a>
-                        </li>
-                        <li>
-                            <a href="#!coming-soon">press</a>
-                        </li>
-                    </ul>
+                            </li>
+                            <li>
+                                <a href="#!contact">contact</a>
+                            </li>
+                            <li>
+                                <a href="#!press">press</a>
+                            </li>
+                        </ul>
                 </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -92,7 +91,7 @@
     <!-- Page Content -->
     <div class="container">
         <div class="row">
-            <div id="landing" class="col-lg-12">
+            <div id="home" class="col-lg-12" style="display: none">
                 <img id="landing-photo" src="images/landing/lsWEB.jpg" alt="" width="65%" height="auto">
             </div>
             <div id="about" class="col-lg-12">
@@ -113,133 +112,265 @@
                     </p>
                 </div>
             </div>
-            <div id="coming-soon" class="col-lg-12">  <h1> Coming Soon! </h1> </div>
-            <!-- click for details??           -->
-<!--             <div id="works" class="col-lg-12">  
-                    
-               <div id="w1" class="works-template-back">
-                    <h2> A Doll's House</h2>
-                    <h3> A New Opera </h3>
-                    <p> Based on the play by Henrik Ibsen </p>
-                    <p> Composed by Grace Oberhofer </p>
+            <div id="music-works" class="col-lg-12">  
+                    <!-- click for details?? -->       
+                <div id="w1" class="works-template" onclick="toggle_display(document.getElementById('w1_img'), document.getElementById('wb1'))">
+                    <img id="w1_img" src="images/music_works/dollshouse.jpg" alt="" width="100%" height="auto" >
+                    <div id="wb1" class = "flex-center-vertically" style="display: none">
+                        <h2>A Doll's House</h2>
+                        <h3>A New Opera</h3>
+                        <p> Based on the play by <b>Henrik Ibsen</b> </p>
+                        <p> 
+                            Composed by <b>Grace Oberhofer</b>
+                            <br>Directed by <b>Allison Benko</b> 
+                            <br>Produced by <b>Juan C. Monetmayor Elosua</b> 
+                        </p>
+                    </div>
                 </div>
 
-                <div id="w1" class="works-template">
-                    <img src="images/music_works/dollshouse.jpg" alt="" width="100%" height="auto">
-                </div>
+                <div id="w2" class="works-template" onclick="toggle_display(document.getElementById('w2_img'), document.getElementById('wb2'))">
+                    <img id="w2_img" src="images/music_works/iconsidols.jpg" alt="" width="auto" height="100%">
+                    <div id="wb2" class = "flex-center-vertically" style="display: none">
+                        <h2>ICONS/IDOLS</h2>
+                        <h3>From The Byzantine Choral Project</h3>
+                        <p> 
+                            Book and Lyrics by <b>Helen Banner</b>
+                            <br>Composed by <b>Grace Oberhofer</b>
+                            <br>Directed by <b>Colette Robert</b> 
+                        </p>
+                    </div>
+                </div> 
 
-                <div id="w2" class="works-template">
-                    <img src="images/music_works/iconsidols.jpg" alt="" width="auto" height="100%">
-                </div>
-
-                <div id="w3" class="works-template">
-                    <img src="images/music_works/free.jpg" alt="" width="auto" height="100%">
-                </div>
+                <div id="w3" class="works-template" onclick="toggle_display(document.getElementById('w3_img'), document.getElementById('wb3'))">
+                    <img id="w3_img" src="images/music_works/free.jpg" alt="" width="auto" height="100%">
+                    <div id="wb3" class = "flex-center-vertically" style="display: none">
+                        <h2>After I Was Free</h2>
+                        <p> 
+                            Book and Lyrics by <b>Caroline Angell</b>
+                            <br>Music by <b>Grace Oberhofer</b>
+                            <br>Developed through <b>Everyday Inferno Theatre Company</b> 
+                        </p>
+                    </div>
+                </div> 
 
             </div>
 
-            <div id="tunes" class="col-lg-12"></div>
+            <!-- <div id="music-tunes" class="col-lg-12"></div> -->
             
-            <div id="headshots" class="col-lg-12">
+            <div id="theater-headshots" class="col-lg-12" style="text-align: center">
                 <div id="hs1" class="headshots">
-                    
-                </div>
-                <div id="hs2" class="headshots">
-                    
+                    <img src="images/theater_headshots/_MG_8500WEB.jpg" alt="" width="auto" height="100%">
                 </div>
                 <div id="hs3" class="headshots">
-                    
+                    <img src="images/theater_headshots/_MG_8145WEB.jpg" alt="" width="auto" height="100%">
                 </div>
-            </div> -->
-               <!-- All stills same height but different widths - equal margins, on hover .8,.9 opacity and black text inside photo -->     
-            <!-- <div id="stills" class="col-lg-12">
-                <div id="ts1" class="headshots"></div>
+                <div id="hs4" class="headshots">
+                    <img src="images/theater_headshots/_MG_8526WEB.jpg" alt="" width="auto" height="100%">
+                </div>
+
+                <div id="hs2" class="headshots">
+                    <img src="images/theater_headshots/_MG_8413WEB.jpg" alt="" width="auto" height="100%">
+                </div>
+
+                <div id="hs6" class="headshots">
+                    <img src="images/theater_headshots/_MG_8716WEB.jpg" alt="" width="auto" height="100%">
+                </div>
+            </div>
+                    
+            <div id="theater-stills" class="col-lg-12" style="text-align: center">
+                <!-- All stills same height but different widths - equal margins, on hover .8,.9 opacity and black text inside photo -->
+                <div id="ts1" class="stills">
+                    <img src="images/theater_performance_stills/2016_Bookstore_Manager_1_Meet_Murasaki_Shikibu.jpg" alt="" width="auto" height="100%">
+                    <div class = "middle"><div class="text">Bookstore Manager<br><i>Meet Murasaki Shikibu</i><br>2016</div></div>
+                </div>
+                <div id="ts2" class="stills">
+                    <img src="images/theater_performance_stills/2016_Bookstore_Manager_2_Meet_Murasaki_Shikibu.jpg" alt="" width="auto" height="100%"><div class = "middle"><div class="text">Bookstore Manager<br><i>Meet Murasaki Shikibu</i><br>2016</div></div>
+                </div>
+                <div id="ts3" class="stills">
+                    <img src="images/theater_performance_stills/2016_Amy_Bonesetter.jpg" alt="" width="auto" height="100%">
+                    <div class = "middle"><div class="text">Amy Bonesetter<br><i>Amy Bonesetter</i><br>2016</div></div>
+                </div>
+                <div id="ts4" class="stills">
+                    <img src="images/theater_performance_stills/2015_The_Witch_Into_the_Woods.jpg" alt="" width="auto" height="100%">
+                    <div class = "middle"><div class="text">The Witch<br><i>Into The Woods</i><br>2015</div></div>
+                </div>
+                <div id="ts5" class="stills">
+                    <img src="images/theater_performance_stills/2015_Mime_2_Hype_Mime_Troupe.jpg" alt="" width="auto" height="100%">
+                    <div class = "middle"><div class="text">Mime<br><i>Hype Mime Troupe</i><br>2015</div></div>
+                </div>
+                <div id="ts6" class="stills">
+                    <img src="images/theater_performance_stills/2014_Amalia_1_She_Loves_Me.jpg" alt="" width="auto" height="100%">
+                    <div class = "middle"><div class="text">Amalia<br><i>She Loves Me</i><br>2014</div></div>
+                </div>
+                <div id="ts7" class="stills">
+                    <img src="images/theater_performance_stills/2014_Amalia_2_She_Loves_Me.jpg" alt="" width="auto" height="100%">
+                    <div class = "middle"><div class="text">Amalia<br><i>She Loves Me</i><br>2014</div></div>
+                </div>
+                <div id="ts8" class="stills">
+                    <img src="images/theater_performance_stills/2014_Amalia_3_She_Loves_Me.jpg" alt="" width="auto" height="100%">
+                    <div class = "middle"><div class="text">Amalia<br><i>She Loves Me</i><br>2014</div></div>
+                </div>
+                <div id="ts9" class="stills">
+                    <img src="images/theater_performance_stills/2014_Sally_Brown_Charlie Brown.jpg" alt="" width="auto" height="100%">
+                    <div class = "middle"><div class="text">Sally Brown<br><i>Charlie Brown</i><br>2014</div></div>
+                </div>
+                <div id="ts10" class="stills">
+                    <img src="images/theater_performance_stills/2013_Mime_1_Hype_Mime_Troupe.jpg" alt="" width="auto" height="100%">
+                    <div class = "middle"><div class="text">Mime<br><i>Hype Mime Troupe</i><br>2013</div></div>
+                </div>
+                <div id="ts11" class="stills">
+                    <img src="images/theater_performance_stills/2013_Logainne_25th_Annual.jpg" alt="" width="auto" height="100%">
+                    <div class = "middle"><div class="text">Logainne<br><i>The 25th Annual</i><br>2013</div></div>
+                </div>
+                <div id="ts12" class="stills">
+                    <img src="images/theater_performance_stills/2012_Juliet_Romeo_And_Juliet.jpg" alt="" width="auto" height="100%">
+                    <div class = "middle"><div class="text">Juliet<br><i>Romeo And Juliet</i><br>2012</div></div>
+                </div>
+                 <div id="ts13" class="stills">
+                    <img src="images/theater_performance_stills/2012_Dora_Our_Class.jpg" alt="" width="auto" height="100%">
+                    <div class = "middle"><div class="text">Dora<br><i>Our Class</i><br>2012</div></div>
+                </div>
                 
-                <div id="ts2" class="headshots"></div>
-
-                <div id="ts3" class="headshots"></div>
-
             </div>
             <div id="contact" class="col-lg-12"> 
-                        <ul id="errors" class="">
+<!--                         <ul id="errors" class="">
                              <li id="info">There were some problems with your form submission:</li>
                         </ul>
-                        <p id="success">Thanks for your message! We will get back to you ASAP!</p> 
+                        <p id="success">Thanks for your message! We will get back to you ASAP!</p>  -->
                 <form class="form-horizontal" action="process.php" method="post" role="form">
                     <div class="form-group">
-                            <div class="col-sm-3">
+                            <div class="col-xs-5 col-sm-3">
                                 <input type="text" id="firstName" class="form-control" name="firstName" placeholder="first name" required />
                             </div>
-                            <div class="col-sm-3">
+                            <div class="col-xs-5 col-sm-3">
                                 <input type="text" id="lastName" class="form-control" name="lastName" placeholder="last name" required />
                             </div>
                     </div>
                     <div class="form-group">
-                        <div class="col-sm-6">
+                        <div class="col-xs-10 col-sm-6">
                             <input type="email" id="email" class="form-control" name="email" placeholder="e-mail" required >
                         </div>
                     </div>
                     <div class="form-group">
-                        <div class="col-sm-6">
+                        <div class="col-xs-10 col-sm-6">
                             <input type="subject" id="subject" class="form-control" name="subject" placeholder="subject" required>
                         </div>
                     </div>
                     
                     
                     <div class="form-group">
-                        <div class="col-sm-6">
+                        <div class="col-xs-10 col-sm-6">
                             <textarea id="message" class="form-control" name="message" placeholder="your message" rows="10" required data-minlength="20"></textarea>
                         </div>
                     </div>
                 
                     <div class="form-group">
-                        <div class="col-lg-offset-5 col-sm-6">
+                        <div class="col-lg-offset-5 col-xs-10 col-sm-6">
                             <input type="submit" value="send" class="btn btn-primary" id="submit-button"/>
                         </div>
                     </div>
                 </form>
-            </div> -->
-<!--             <div id="press" class="col-lg-12">
+            </div>
+            <div id="press" class="col-lg-12">
                 <div class="news">
                     <h1> in the news</h1>
-                    <div id="p1" class="reviews">
-                        <div class="date">1/1</div>
-                        <div class="review">
-                            <div class="review-title"><h4> New York Theater Review</h4></div>
-                            <p class="review-desc">Ryan Hudak interviews Helen Banner, Grace Oberhofer and Colette Robert
-        on ICONS/IDOLS, as presented by the New Ohio as parts of Ice Factory 2016</p>
-                        </div>
-                    </div>
+                    <div id="all-reviews">
+                        <a href="http://www.broadwayworld.com/cabaret/article/WEBroadway-to-Celebrate-Female-Songwriters-with-NOTEWORTHY-at-the-D-Lounge-20170206#" target="_blank">
+                            <div id="p1" class="reviews">
+                                <div class="date">Feb 2017</div>
+                                <div class="review">
+                                    <div class="review-title"><h4>Broadway World</h4></div>
+                                    <p class="review-desc">WEBroadway to Celebrate Female Songwriters with ‘NOTEWORTHY’ at the D-Lounge</p>
+                                </div>
+                            </div>
+                        </a>
 
-                    <div id="p2" class="reviews">
-                        <div class="date">12/25</div>
-                        <div class="review">
-                            <div class="review-title"><h4> New York Theater Review</h4></div>
-                            <p class="review-desc">Ryan Hudak interviews Helen Banner, Grace Oberhofer and Colette Robert
-        on ICONS/IDOLS, as presented by the New Ohio as parts of Ice Factory 2016</p>
-                        </div>
-                    </div>
-
-                    <div id="p3" class="reviews">
-                        <div class="date">9/1</div>
-                        <div class="review">
-                            <div class="review-title"><h4> New York Theater Review</h4></div>
-                            <p class="review-desc">Ryan Hudak interviews Helen Banner, Grace Oberhofer and Colette Robert
-        on ICONS/IDOLS, as presented by the New Ohio as parts of Ice Factory 2016</p>
-                        </div>
+                        <a href="https://youtu.be/luf-qE3h--g" target="_blank">
+                            <div id="p2" class="reviews">
+                                <div class="date">Dec 2016</div>
+                                <div class="review">
+                                    <div class="review-title"><h4>Refinery29</h4></div>
+                                    <p class="review-desc">Undercover Latinas | So sketch (featured extra)</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://www.shethinx.com/blogs/thinx-pieces/hi" target="_blank">
+                            <div id="p3" class="reviews">
+                                <div class="date">Nov 2016</div>
+                                <div class="review">
+                                    <div class="review-title"><h4>THINX</h4></div>
+                                    <p class="review-desc">The Official ~THINX 2016 Holiday Gift Guide~, featuring Bitch Carols (featured vocalist)</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://youtu.be/CLie1ukaqCY" target="_blank">
+                            <div id="p4" class="reviews">
+                                <div class="date">Oct 2016</div>
+                                <div class="review">
+                                    <div class="review-title"><h4>Video Interview with Morgan Burch</h4></div>
+                                    <p class="review-desc">Grace Oberhofer; song and interview</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="http://www.newgeorges.org/uncategorized/silver-belles-celebrate-25-highly-theatrical-years/" target="_blank">
+                            <div id="p5" class="reviews">
+                                <div class="date">Sep 2016</div>
+                                <div class="review">
+                                    <div class="review-title"><h4>New Georges</h4></div>
+                                    <p class="review-desc">Silver Belles: Celebrate 25 Highly Theatrical Years. Artists Announced! (featured composer)</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="http://everydayinferno.tumblr.com/post/150450007403/after-i-was-free-interview-grace-oberhofer" target="_blank">
+                            <div id="p6" class="reviews">
+                                <div class="date"></div>
+                                <div class="review">
+                                    <div class="review-title"><h4>Everyday Inferno Theatre Company</h4></div>
+                                    <p class="review-desc">After I Was Free Interview: Grace Oberhofer</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="http://www.broadwayworld.com/off-off-broadway/article/Rachel-Christiansen-and-The-Brewing-Dept-Present-MEET-MURASAKI-SHIKIBU-FOLLOWED-BY-BOOK-SIGNING-AND-OTHER-THINGS-20160813" target="_blank">
+                            <div id="p7" class="reviews">
+                                <div class="date"> Aug 2016</div>
+                                <div class="review">
+                                    <div class="review-title"><h4>Broadway World</h4></div>
+                                    <p class="review-desc">Rachel Christiansen and The Brewing Dept. Present MEET MURASAKI SHIKIBU FOLLOWED BY BOOK SIGNING, AND OTHER THINGS</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="http://newyorktheatrereview.blogspot.com/2016/06/ryan-hudak-interviews-helen-banner.html" target="_blank">
+                            <div id="p8" class="reviews">
+                                <div class="date">Jun 2016</div>
+                                <div class="review">
+                                    <div class="review-title"><h4> New York Theater Review</h4></div>
+                                    <p class="review-desc">Ryan Hudak interviews Helen Banner, Grace Oberhofer and Colette Robert
+                on ICONS/IDOLS, as presented by the New Ohio as parts of Ice Factory 2016</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="http://www.playbill.com/article/the-ice-factory-festival-kicks-off-today" target="_blank">
+                            <div id="p9" class="reviews">
+                                <div class="date"></div>
+                                <div class="review">
+                                    <div class="review-title"><h4>Playbill</h4></div>
+                                    <p class="review-desc">The Ice Factory Festival Kicks Off Today: The Obie-winning event returns to the New Ohio Theatre Off-Broadway</p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="get-connected">
                     <h1>get connected</h1>
                     <div class="social-media">
-                        <i class="fa fa-facebook"></i>
-                        <i class="fa fa-instagram"></i>
-                        <i class="fa fa-soundcloud"></i>
-                        <i class="fa fa-youtube"></i>
+                        <a href="https://www.facebook.com/graceoberhofermusic/" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/graceoberhofer/" target="_blank"><i class="fa fa-instagram"></i></a>
+                        <a href="https://soundcloud.com/grace-oberhofer" target="_blank"><i class="fa fa-soundcloud"></i></a>
+                        <!-- <i class="fa fa-youtube"></i> -->
                     </div>
 
                 </div>
-            </div> -->
+            </div>
     </div>
     <!-- /.container
 
