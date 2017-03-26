@@ -32,7 +32,7 @@ if( isset($_POST) ){
                       <p><strong>Message: </strong> {$message} </p>
                       <p>This message was sent from the IP Address: {$ipaddress} on {$date} at {$time}</p>";
          
-        mail("grace.oberhofer@gmail.com","New Enquiry",$emailbody,$headers);
+        mail("sarika.halarnakar@gmail.com","New Enquiry",$emailbody,$headers);
          
     }
 
