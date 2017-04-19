@@ -204,10 +204,10 @@ body {
 
 .works-template{
 	display: inline-block;
-	width: 450px;
-	height: 300px;
+	width: 500px;
+	height: 325px;
 	background-color: white;
-	margin-right: 100px;
+	margin-right: 50px;
 	margin-bottom:  20px;
 	overflow:hidden;
 	text-align: center;
@@ -218,8 +218,7 @@ body {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	height: 300px;
-	border: 2px solid black;
+	height: 325px;
 }
 
 .works-template-back{
@@ -228,25 +227,49 @@ body {
 	background-color: white;
 	margin-right: 100px;
 	margin-bottom:  20px;
-	border: 2px solid black;
 	overflow:hidden;
 	text-align: center;
 }
 
 /* Myriad? Helvetica? Baskerville? */
 
-.flex-center-vertically > p{
+.lside{
+	width: 50%;
+	float: left;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	border-right: 1px solid black;
+	border-left: 2px solid black;
+}
+
+.rside{
+	width: 50%;
+	float: right;
+	padding-top: 10px;
+	padding-left:8px;
+	padding-right: 8px;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
+	border-left: 1px solid black;
+}
+
+.rside > p{
+	font-size: .85em;
+	text-align: left;
+}
+.lside > p{
 	margin-top: 15px;
 	font-style: oblique;
 }
 
-.flex-center-vertically > h2{
+.lside > h2{
 	font-family: Myriad;
-	font-size: 3em;
+	font-size: 2.5em;
 
 }
 
-.flex-center-vertically > h3{
+.lside > h3{
 	margin-top: -8px;
 	font-style: oblique;
 	font-size: 1em;
@@ -264,7 +287,7 @@ body {
 }
 
 #w3 > img{
-	margin-left: -250px;
+	margin-left: -285px;
 }
 
 
